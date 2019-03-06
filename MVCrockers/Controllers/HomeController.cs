@@ -8,16 +8,24 @@ namespace MVCrockers.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Home/Index
         public ActionResult Index()
         {
             return View();
         }
 
+        //Home/About
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
+        }
+
+        public ActionResult Foo()
+        {
+            return View("About");
         }
 
         public ActionResult Contact()

@@ -15,9 +15,17 @@ namespace MVCrockers
 
             routes.MapRoute(
                 name: "Default",
+                url: "backstage/{secret}/{format}",
+                defaults: new { controller = "Home", action = "Backstage", format = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Backstage",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
         }
     }
 }
